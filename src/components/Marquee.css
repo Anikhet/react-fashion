@@ -1,0 +1,22 @@
+.marquee {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .track {
+    display: flex;
+    animation: marquee 10s linear infinite;
+  }
+  
+  .content {
+    font-size: 20vw;
+    padding-right: 2vw;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
