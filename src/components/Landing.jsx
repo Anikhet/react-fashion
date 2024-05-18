@@ -3,8 +3,8 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <div   className="w-full h-screen p-10 bg-zinc-900  ">
-      <div className="textstructure flex items-center mt-36 py-20">
+    <div data-scroll data-scroll-section data-scroll-speed="-0.4"  className="w-full h-[100vh] p-10 bg-[#F6F6F6] text-[#8785A2]">
+      <div  className="textstructure flex items-center mt-36 py-20">
         <div className="masker">
           <h1 className="uppercase text-[10vw] leading-none font-semibold ">
             Fashion
@@ -24,10 +24,10 @@ const Landing = () => {
           </h1>
         </div>
       </div>
-      <div className="  border-t-[1px] border-zinc-800 flex justify-between items-center px-20 py-4 py-2">
+      <div className="  border-t-[1px] border-zinc-800 flex justify-between items-center px-20 py-2 mt-[7vw]  ">
         {["For everyone", "Good Fashion empowers you"].map((item, index) => {
           return (
-            <p className="leading-none -tracking-tight font-light text-md ">
+            <p className="leading-none -tracking-tight font-light text-md text-[#8785A2] ">
               {item}
             </p>
           );
