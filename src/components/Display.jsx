@@ -7,16 +7,18 @@ import React, { useState } from 'react'
 
 const Display = () => {
   const[useHover,setHover] = useState(false)
+  const arr = [0,1,4,5]
  
  
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-0.2"   className=' bg-zinc-100 w-full  text-black flex items-center justify-center gap-32'>
+    <div data-scroll data-scroll-section data-scroll-speed="-0.1"   className='h-[100vh] bg-[#F6F6F6] w-full  text-black flex items-center justify-center gap-32'>
         <h1 className='absolute text-8xl z-10 font-semibold'>
             {"TRENDY".split('').map((item,index)=>{
-               return <motion.span initial={{y:'-10%',opacity:0}} animate={useHover ? ({y:"0%",opacity:1}) : {y:"-50%"}} 
+               return <motion.span  initial={{y:'-10%',opacity:0}} animate={useHover ? ({y:"0%",opacity:1}) : {y:"-100%"}} 
                transition={{ease: [0.34, 1.56, 0.64, 1], delay:index*0.05}}
-               className='inline-block'>{item}</motion.span>
+               className={`${arr.indexOf(index)=== -1 ? 'text-black' : 'text-white' }  inline-block`}>{item}</motion.span>
             })}
+           
             </h1> 
             
  

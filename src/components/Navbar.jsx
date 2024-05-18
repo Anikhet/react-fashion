@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`rounded-2xl fixed z-[999] flex items-center justify-between w-1/2 transform -translate-x-1/2 left-1/2 px-12 py-8 bg-[#FFC7C7] ${
+      className={`rounded-2xl fixed z-[999] flex items-center justify-between w-full text-[1.5vw] px-12 py-8 bg-[#FFC7C7] ${
         visible ? 'top-0' : '-top-40' 
       } transition-all duration-500`}
     >
@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="links flex gap-24 text-2xl">
         {['Home', 'Work', 'Culture'].map((elem, index) => {
           return (
-            <a className="text-sm flex items-center gap-1" href="#">
+            <a className="text-[1vw] flex items-center gap-1" href="#">
               {index === 0 && (
                 <span className="inline-block w-1 h-1 bg-green-500 rounded-full"></span>
               )}
