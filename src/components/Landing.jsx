@@ -16,7 +16,8 @@ const Landing = () => {
               animate={{ width: '10vw' }} 
               transition={{ 
                 ease: [0.76, 0, 0.24, 1], 
-                duration: 2.5, 
+                duration: 3, 
+                delay:1,
                 repeat: Infinity, 
                 repeatType: "reverse" 
               }} 
