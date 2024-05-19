@@ -12,7 +12,7 @@ const Track = () => {
             scrollTrigger:{
                 trigger:parent.current,
                 top:"0 0",
-                markers:true,
+    
                 scrub:1,
                 pin:true
             },

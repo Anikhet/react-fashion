@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`rounded-2xl fixed z-[999] flex items-center justify-between w-full text-[1.5vw] px-12 py-8 bg-[#FFC7C7] ${
+      className={`font-['Coco_Gothic'] text-[#514d8e] rounded-2xl fixed z-[999] flex items-center justify-between w-full text-[1.5vw] px-12 py-8 bg-[#FFC7C7] ${
         visible ? 'top-0' : '-top-40' 
       } transition-all duration-500`}
     >
