@@ -9,7 +9,7 @@ import Track from './components/Track'
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className='min-h-screen w-full  bg-zinc-900 font-["Coco_Gothic"]   '> 
+    <div className='min-h-screen w-full  bg-zinc-900    '> 
     <Navbar></Navbar>
     <Landing></Landing>
     <Marquee></Marquee>
