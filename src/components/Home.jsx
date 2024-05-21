@@ -7,6 +7,9 @@ import Landing from './Landing';
 import Marquee from './Marquee';
 import Display from './Display';
 import Track from './Track';
+import Portfolio from './Portfolio';
+import Postport from './Postport';
+import Footer from './Footer';
 
 
 
@@ -20,6 +23,10 @@ const App = () => {
     <Marquee></Marquee>
     <Display></Display>
     <Track></Track>
+    <Portfolio></Portfolio>
+    <Postport></Postport>
+    <Footer></Footer>
+    
  
    
     
