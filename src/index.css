@@ -1,9 +1,11 @@
+@import url('/fonts.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* src/App.css or src/index.css */
-@import url('/fonts.css');
+
 
 body {
   font-family: 'Coco_Gothic', sans-serif;
