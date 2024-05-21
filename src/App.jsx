@@ -15,6 +15,7 @@ const App = () => {
     <Marquee></Marquee>
     <Display></Display>
     <Track></Track>
+    
     </div>
   )
 }

@@ -17,7 +17,7 @@ const Landing = () => {
               transition={{ 
                 ease: [0.76, 0, 0.24, 1], 
                 duration: 3, 
-                delay:1,
+                delay:0.5,
                 repeat: Infinity, 
                 repeatType: "reverse" 
               }} 

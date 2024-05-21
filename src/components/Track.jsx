@@ -19,11 +19,11 @@ const Track = () => {
                 end: "center center",
                 scrub: 1,
                 pin: true,
-                markers:true
+                // markers:true
             },
             width: "100%",
             height: "100%",
-            ease: Power4.easeInOut
+            ease: [0.64, 0, 0.78, 0]
         })
 
         tl.from(panache.current, {
