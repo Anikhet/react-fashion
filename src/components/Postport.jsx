@@ -8,9 +8,9 @@ const Postport = () => {
     <div className='w-full h-[80vh] bg-[#F6F6F6] flex gap-[2vw] items-center justify-center tracking-tighter  '>
          {["Explore","Our","Shopper's page."].map((item,index)=>{
               return(
-        <div className='w-auto h-[15%]  overflow-hidden'>
+        <div  key={index} className='w-auto h-[15%]  overflow-hidden'>
            
-                <motion.h1 key={index}
+                <motion.h1
                   initial={{rotate:-90,
                       y:"90%",opacity:0}}
                   whileInView={{rotate:0,y:0,opacity:1}}
