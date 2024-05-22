@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 import 'remixicon/fonts/remixicon.css'
 
-const Navbar = () => {
+const Navbar = ({data}) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [forcedVisible, setForcedVisible] = useState(false);
@@ -94,8 +94,12 @@ const Navbar = () => {
         
        
         <div className='relative w-100%'>
-          <h5 className='font-serif rounded-full px-2 absolute w-6 bottom-4 left-4 text-[1vw]'>1</h5>
-          <i className="ri-shopping-cart-2-fill"></i>
+          <h5 className='font-serif rounded-full px-2 absolute w-6 bottom-4 left-4 text-[1vw]'>{data}</h5>
+         <NavLink  to="/shoppingcart" > 
+         
+         <i className="ri-shopping-cart-2-fill"></i>
+         
+         </NavLink>
         </div>
         
       

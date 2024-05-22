@@ -3,11 +3,15 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import Loading from './Loading';
 import { motion, AnimatePresence } from 'framer-motion';
+import Bag from './Bag';
+
 
 const Shopping = () => {
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(true);
+  const[cart,setCart] = useState(0)
+  const[bag,setBag] = useState()
 
   const getSearch = async () => {
     try {
@@ -20,6 +24,15 @@ const Shopping = () => {
       setLoading(false);
     }
   };
+  const handleClick= (product)=>{
+    setCart(cart+1)
+   
+    setBag([...bag, product]);
+
+
+
+
+  }
 
   useEffect(() => {
     getSearch();
@@ -35,7 +48,7 @@ const Shopping = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar data={cart} />
       <AnimatePresence>
         {loading ? (
           <motion.div
@@ -56,8 +69,8 @@ const Shopping = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="search-container w-screen flex  flex-col items-center justify-center h-screen">
-              <div className="  w-screen h-1/2   flex flex-col items-center justify-center gap-4  overflow-x-auto ">
+            <div className="search-container w-[100vw] flex  flex-col items-center justify-center h-screen">
+              <div className="  w-[100vw] h-screen   flex flex-col items-center justify-center gap-4  overflow-x-auto  ">
                 <input
                   className="w-50 h-16 p-4 rounded-md absolute top-[25%] z-[999] bg-zinc-100 "
                   type="text"
@@ -65,17 +78,22 @@ const Shopping = () => {
                   value={query}
                   onChange={handleSearchChange}
                 />
-                <div className="product-list flex items-center justify-center h-1/2 p-4 gap-8  ">
+                <div className="product-list flex items-end w-auto bg-zinc-200 justify-center h-[60vh]  gap-[2vw]    ">
                   {filteredResults.map(product => (
-                    <div key={product.id} className="w-40 product-item h-60 text-sm">
+                    <div className='flex flex-col gap-[7vw]  bottom-0'>
+                    <div key={product.id} className="w-40 product-item h-60 text-sm flex flex-col gap-[0.4vw]">
                       <img className="w-full h-full object-cover" src={product.image} alt={product.title} />
                       <h3>{product.title}</h3>
-                      <p>{product.price}</p>
+                      <p>{`$${product.price}`}</p>
+                      </div>
+                      <button onClick={()=>{handleClick(product)}} className='p-2 bg-zinc-400 rounded-lg'>Add to cart</button>
+                 
                     </div>
                   ))}
                 </div>
               </div>
             </div>
+            <Bag items={bag} />
           </motion.div>
         )}
       </AnimatePresence>
