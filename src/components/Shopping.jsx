@@ -29,9 +29,6 @@ const Shopping = () => {
    
     setBag([...bag, product]);
 
-
-
-
   }
 
   useEffect(() => {
@@ -56,7 +53,7 @@ const Shopping = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             className="fixed w-full h-full inset-0 flex items-center justify-center bg-white z-50"
           >
             <Loading />
