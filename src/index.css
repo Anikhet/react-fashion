@@ -1,14 +1,31 @@
-@font-face {
-  font-family: 'Coco_Gothic';
-  src: url(data:font/ttf;base64,<your_base64_string_here>) format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* Import Tailwind CSS base, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Import Tailwind CSS base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Import local Coco Gothic font */
+@font-face {
+  font-family: 'Coco Gothic';
+  src: url('/Coco-Gothic-Regular-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the Roboto font to the body */
 body {
-  font-family: 'Coco_Gothic', sans-serif;
+  @apply font-sans;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Example of applying the Coco Gothic font */
+.font-coco {
+  font-family: 'Coco Gothic', sans-serif;
 }
